@@ -1,0 +1,21 @@
+{
+  "name": "basics-practice",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:cjs": "node src/common-module/index.cjs",
+    "start:mjs": "node src/es-module/index.mjs",
+    "start:todo": "node src/todo/index.mjs",
+    "start:todo-csv": "node src/todo/csv/index.mjs"
+  },
+  "dependencies": {
+    "inquirer": "^11.1.0",
+    "json-2-csv": "^5.5.6"
+  },
+  "workspaces": []
+}
