@@ -11,7 +11,8 @@
     "start:cjs": "node src/common-module/index.cjs",
     "start:mjs": "node src/es-module/index.mjs",
     "start:todo": "node src/todo/index.mjs",
-    "start:todo-csv": "node src/todo/csv/index.mjs"
+    "start:todo-csv": "node src/todo/with-csv/index.mjs",
+    "start:todo-db": "node src/todo/with-db/index.mjs"
   },
   "dependencies": {
     "inquirer": "^11.1.0",

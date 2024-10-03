@@ -1,4 +1,4 @@
-import Todo from "../todo.mjs";
+import Todo from "../models/todo.mjs";
 
 const TODOS = [
     new Todo(1, 1, 'Tache 1', true),
