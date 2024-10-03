@@ -1,7 +1,6 @@
-
-// 1. créer une classe
 import { DataSource, EntitySchema } from "typeorm";
 
+// 1. créer une classe
 // (un model)
 class Post {
     constructor(id, title, text) {
@@ -20,10 +19,10 @@ const PostEntity = new EntitySchema({
         id: {
             type: 'int',
             primary: true,
-            generated: true
+            generated: true,
         },
         title: {
-            type: 'varchar',            
+            type: 'varchar',        
         },
         text: {
             type: 'text',            
@@ -46,4 +45,9 @@ await db.initialize();
 // => l'objet le plus générique de typeORM pour executer des actions sur la db
 const post = new Post(null, 'My first post', 'My content...');
 await db.manager.save(post);
-console.log(`Id du nouveau post ${post.id}`);
+console.log(`Id du nouveau post: ${post.id}`);
+
+// 6. utiliser les repositories
+const postRepo = await db.getRepository(Post);
+const result = await postRepo.find(); // select all
+console.log('Les posts: ', result);
