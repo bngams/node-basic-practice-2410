@@ -2,17 +2,7 @@ import { DataSource, EntitySchema } from "typeorm";
 import TodoEntity from "../entities/todo.entity.mjs";
 import TODOS from "../mocks/todo.mock.mjs";
 import Todo from "../models/todo.mjs";
-
-// créer une connexion à la DB 
-const db = new DataSource({
-    type: "sqlite",
-    database: "db-todos.sqlite3",
-    synchronize: true, // ask type typeORM to create tables, manage schema
-    entities: [TodoEntity] 
-});
-
-// initialiser la connexion
-await db.initialize();
+import db from "../datasource/db.mjs";
 
 // data mock
 const todos = TODOS; //.map(todo => todo.id = null);
