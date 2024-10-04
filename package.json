@@ -12,7 +12,9 @@
     "start:mjs": "node src/es-module/index.mjs",
     "start:todo": "node src/todo/index.mjs",
     "start:todo-csv": "node src/todo/with-csv/index.mjs",
-    "start:todo-db": "node src/todo/with-db/index.mjs"
+    "start:todo-db": "node src/todo/with-db/index.mjs",
+    "start:todo-http": "node src/todo/with-http/index.mjs",
+    "start:todo-api": "json-server --watch db.json"
   },
   "dependencies": {
     "inquirer": "^11.1.0",
@@ -21,5 +23,8 @@
     "sqlite3": "^5.1.7",
     "typeorm": "^0.3.20"
   },
-  "workspaces": []
+  "workspaces": [],
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
 }
